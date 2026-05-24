@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.container {
+  padding: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* MENU SUPERIOR */
+.menu-icon {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background: #222;
+  padding: 10px;
+  border-radius: 10px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.hidden { display: none; }
+
+/* HEADER */
+.header {
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+#setsScore {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* SCORE */
+.score {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+/* BOTÕES PRINCIPAIS */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+button.green {
+  flex: 1;
+  padding: 16px 0;
+  font-size: 20px;
+  border-radius: 999px;
+  border: none;
+  background: #2ecc71; /* VERDE */
+  color: #000;
+}
+
+button.red {
+  flex: 1;
+  padding: 16px 0;
+  font-size: 20px;
+  border-radius: 999px;
+  border: none;
+  background: #e74c3c; /* VERMELHO */
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
