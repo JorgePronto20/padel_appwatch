@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Padel Watch</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <div id="menu" class="menu hidden">
+    <button onclick="newGame()">Novo Jogo</button>
+    <button onclick="newSet()">Novo Set</button>
+    <button onclick="resetAll()">Reset</button>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <div id="set">Set 1</div>
+      <div id="games">0 - 0</div>
+      <div id="setsScore">Sets: 0 - 0</div>
+    </div>
+
+    <div class="score">
+      <span id="scoreUs">0</span>
+      <span>-</span>
+      <span id="scoreThem">0</span>
+    </div>
+
+    <div class="buttons">
+      <button class="green" onclick="addPoint('us')">+ Nós</button>
+      <button class="red" onclick="addPoint('them')">+ Eles</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
